@@ -2,7 +2,9 @@ FROM alpine:latest
 MAINTAINER Ryan_Newman <15244909057.ww@gmail.com>
 
 # use china souce
-ADD ./apk/repositories /etc/apk/repositories
+# ADD ./apk/repositories /etc/apk/repositories
+
+# include local static files
 ADD ./static /var/www/static
 
 # update software
