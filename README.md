@@ -7,19 +7,19 @@ $ docker-compose up -d
 ```
 
 
-### 2.运行容器   
+### 2. Run the container
 ```
 docker run -ti --restart=always --name rtmp -p 80:80 -p 1935:1935 -v /mydata/hls:/var/tmp/hls -d alpine-rtmp   
 ```
 
-### 3.默认推流地址   
+### 3. Default push-stream address
 
-#### rtmp://主机ip/live/直播房间号(可随便填写，不能冲突)   
+#### rtmp://host ip/live/live-room number (can be filled in at will, can't conflict)
 
 
-### 4.默认播放地址   
+### 4. Default playback address
 
-#### rtmp://主机ip/live/房间号   
+#### rtmp://Host ip/live/room no.
 
 #### http://主机ip/live/房间号.m3u8   
 
