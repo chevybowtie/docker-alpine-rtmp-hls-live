@@ -11,6 +11,7 @@ $ docker run -d rtmp-hls-live
 $ docker container ls
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
 d2ce170cb21b        rtmp-hls-live       "/usr/bin/supervisor…"   29 seconds ago      Up 27 seconds       80/tcp, 1935/tcp    nostalgic_meninsky
+$ docker stop d2ce170cb21b
 $
 ```
 
