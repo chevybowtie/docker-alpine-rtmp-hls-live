@@ -31,7 +31,7 @@ $
 
 ### 4. Alter image
 ```
-docker run -i -t rtmp-hls-live /bin/sh
+$ docker run -i -t rtmp-hls-live /bin/sh
 fetch http://dl-cdn.alpinelinux.org/alpine/v3.10/main/x86_64/APKINDEX.tar.gz
 fetch http://dl-cdn.alpinelinux.org/alpine/v3.10/community/x86_64/APKINDEX.tar.gz
 (1/2) Installing libmagic (5.37-r1)
