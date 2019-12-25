@@ -3,28 +3,26 @@ Build this:
 $ apt-get install git 
 $ git clone https://github.com/chevybowtie/docker-alpine-rtmp-hls-live.git
 $ cd docker-alpine-rtmp-hls-live/
-$ docker-compose up -d
+$ docker build -t rtmp-hls-live .
+$ docker image ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+rtmp-hls-live       latest              38926b571df9        5 days ago          106MB
+$ docker run -d rtmp-hls-live
+$ docker container ls
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+d2ce170cb21b        rtmp-hls-live       "/usr/bin/supervisor…"   29 seconds ago      Up 27 seconds       80/tcp, 1935/tcp    nostalgic_meninsky
+$
 ```
 
+### 2. Default push-stream address
 
-### 2. Run the container
-```
-docker run -ti --restart=always --name rtmp -p 80:80 -p 1935:1935 -v /mydata/hls:/var/tmp/hls -d alpine-rtmp   
-```
-
-### 3. Default push-stream address
-
-#### rtmp://host ip/live/live-room number (can be filled in at will, can't conflict)
+#### rtmp://host ip/live/{room#} (can be filled in at will, can't conflict)
 
 
-### 4. Default playback address
+### 3. Default playback address
 
-#### rtmp://Host ip/live/room no.
-
-#### http://主机ip/live/房间号.m3u8   
-
-#### http://主机ip/live/房间号_1080p.m3u8 （1080p分辨率）   
-
-#### http://主机ip/live/房间号_720p.m3u8 （720p分辨率）   
-
-#### http://主机ip/live/房间号_480p.m3u8 （480p分辨率）   
+* rtmp://Host ip/live/{room#}
+* http://Host ip/live/{room#}.m3u8   
+* http://Host ip/live/{room#}_1080p.m3u8 （1080p Resolution）   
+* http://Host ip/live/{room#}_720p.m3u8 （720p Resolution）   
+* http://Host ip/live/{room#}_480p.m3u8 （480p Resolution）   
