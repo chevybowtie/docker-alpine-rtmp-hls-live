@@ -6,11 +6,15 @@ MAINTAINER Paul Sturm <chevybowtie@thesturms.com>
 
 # include local static files
 ADD ./static /var/www/static
+RUN chmod 755 /var/www/static/ -v
 
 # update software
 
 RUN apk update
 RUN apk upgrade
+
+# install nano
+#RUN apk add nano
 
 # install nginx
 
@@ -40,7 +44,10 @@ RUN apk add ffmpeg faac
 # create needs folder and permission
 
 RUN mkdir -p /var/live/hls
+RUN chmod 755 /var/live/hls/ -v
+
 RUN mkdir -p /var/log/supervisor
+
 RUN mkdir -p /run/nginx
 
 # run container
