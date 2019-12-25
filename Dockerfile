@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Ryan_Newman <15244909057.ww@gmail.com>
+MAINTAINER Paul Sturm <chevybowtie@thesturms.com>
 
 # use china souce
 # ADD ./apk/repositories /etc/apk/repositories
