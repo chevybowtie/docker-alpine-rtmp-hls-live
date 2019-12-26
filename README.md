@@ -71,4 +71,4 @@ These are planned items
 * add security (right now you can only restrict by IP addresses)
 * add /stats/ page to the web server so you can view the statistics of the streams being processed
 * add instructions to upload to a plesk server to make deployment even easier
-
+* add a trivial API to retrieve the container build version
