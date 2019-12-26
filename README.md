@@ -81,5 +81,5 @@ These are planned items
 
 ### Alternate way to get this running
 
-If you're not interested in building your own container, [a docker image](https://hub.docker.com/repository/docker/chevybowtie/media-rebroadcast) will be available so you can get the end result.
+If you're not interested in building your own container, [a docker image](https://hub.docker.com/repository/docker/chevybowtie/media-rebroadcast) is available so you can get the end result. These are automatically built from the master branch when the master branch is tagged with a new version.
 
