@@ -21,7 +21,7 @@ $ docker container ls
 $ docker stop d2ce170cb21b
 ```
 
-### 2. Default push-stream address
+### 2. Setup OBS to push-stream to container
 
 #### rtmp://host ip/live/{room-name} (can be filled in at will, can't conflict)
 
