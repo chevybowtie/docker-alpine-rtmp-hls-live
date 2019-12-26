@@ -72,3 +72,9 @@ These are planned items
 * add /stats/ page to the web server so you can view the statistics of the streams being processed
 * add instructions to upload to a plesk server to make deployment even easier
 * add a trivial API to retrieve the container build version
+
+
+### Alternate way to get this running
+
+If you're not interested in building your own container, [a docker image](https://hub.docker.com/repository/docker/chevybowtie/media-rebroadcast) will be available so you can get the end result.
+
