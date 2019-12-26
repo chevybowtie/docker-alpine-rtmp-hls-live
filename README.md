@@ -26,7 +26,7 @@ $ docker container ls
 $ docker stop d2ce170cb21b
 ```
 
-### 2. Setup OBS to push-stream to container
+### 2. Setup OBS to push a stream to container
 
 OBS should be setup to stream to `rtmp://{domainname or IP}/live/`.  Whatever you wish the `{room-name}` to be should be entered for in the `{stream-key}` field.
 
@@ -34,7 +34,7 @@ In other words, the `{stream-key}` becomes the `{room-name}` in your addresses.
 
 * rtmp://{domainname or IP}/live/{room-name} 
 
-`{room-name}` can be anything you choose when you start the stream. It must be unique for all active streams.
+`{room-name}` can be anything you choose when you start the stream. It must be unique among all active streams being pushed to this container.
 
 
 ### 3. Default playback address
