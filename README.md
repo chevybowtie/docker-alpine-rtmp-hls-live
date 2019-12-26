@@ -1,4 +1,9 @@
-Build from this repo:
+### Purpose
+
+This docker container will setup an `nginx` web server that supports `rtmp` and `http` protocols. The idea is a quick way to get OBS streaming to your own, private server where you can control who sees the boradcast.
+
+
+### 1. Build from this repo:
 ```
 $ apt-get install git 
 
@@ -57,3 +62,13 @@ fetch http://dl-cdn.alpinelinux.org/alpine/v3.10/community/x86_64/APKINDEX.tar.g
 Executing busybox-1.30.1-r3.trigger
 OK: 119 MiB in 74 packages
 ```
+
+### TODO
+
+These are planned items
+
+* enable HTTPS by passing in a domain name - Let's Encrypt will create our cert for us
+* add security (right now you can only restrict by IP addresses)
+* add /stats/ page to the web server so you can view the statistics of the streams being processed
+* add instructions to upload to a plesk server to make deployment even easier
+
