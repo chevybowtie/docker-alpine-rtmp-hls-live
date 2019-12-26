@@ -1,4 +1,4 @@
-Build this:
+Build from this repo:
 ```
 $ apt-get install git 
 
