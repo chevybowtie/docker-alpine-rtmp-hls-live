@@ -2,6 +2,12 @@
 
 This docker container will setup an `nginx` web server that supports `rtmp` and `http` protocols. The idea is a quick way to get OBS streaming to your own, private server where you can control who sees the boradcast.
 
+It exposes `port 80` for `http://` viewing and `port 1935` for `rtmp` ingesting (it also relays back out on 1935). Few clients understand `rtmp` so most of your viewers/listeners would be hitting the `http://` broadcast. (`https://` is planned).
+
+### Broadcast site
+
+For video broadcast, a 1080p stream takes between 2-5Mbs. Your site should have, at minimum, 8Mbs of upload bandwidth. The benefit of using this container is that if you have 10 people watching, then you'd need closer to 30Mbs to keep those streams going. Using this container, you can use your upload bandwidth more efficiently - this container will stream to the 10 user while you only have to worry with a single 3Mbs stream.
+
 
 ### 1. Build from this repo:
 ```
@@ -21,7 +27,7 @@ $ docker run -p 80:80 -p 1935:1935 -d rtmp-hls-live
 
 $ docker container ls
  CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
- d2ce170cb21b        rtmp-hls-live       "/usr/bin/supervisor…"   29 seconds ago      Up 27 seconds       80/tcp, 1935/tcp    nostalgic_meninsky
+ d2ce170cb21b        rtmp-hls-live       "/usr/bin/supervisor…"   29 seconds ago      Up 27 seconds       80/tcp, 1935/tcp   
 
 $ docker stop d2ce170cb21b
 ```
