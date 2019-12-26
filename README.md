@@ -9,14 +9,14 @@ $ cd docker-alpine-rtmp-hls-live/
 $ docker build -t rtmp-hls-live .
 
 $ docker image ls
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-rtmp-hls-live       latest              38926b571df9        5 days ago          106MB
+ REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ rtmp-hls-live       latest              38926b571df9        5 days ago          106MB
 
 $ docker run -p 80:80 -p 1935:1935 -d rtmp-hls-live
 
 $ docker container ls
-CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
-d2ce170cb21b        rtmp-hls-live       "/usr/bin/supervisor…"   29 seconds ago      Up 27 seconds       80/tcp, 1935/tcp    nostalgic_meninsky
+ CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+ d2ce170cb21b        rtmp-hls-live       "/usr/bin/supervisor…"   29 seconds ago      Up 27 seconds       80/tcp, 1935/tcp    nostalgic_meninsky
 
 $ docker stop d2ce170cb21b
 ```
