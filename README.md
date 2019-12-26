@@ -67,11 +67,16 @@ OK: 119 MiB in 74 packages
 
 These are planned items
 
-* enable HTTPS by passing in a domain name - Let's Encrypt will create our cert for us
-* add security (right now you can only restrict by IP addresses)
-* add /stats/ page to the web server so you can view the statistics of the streams being processed
-* add instructions to upload to a plesk server to make deployment even easier
+* enable HTTPS by passing in a domain name to the container - Let's Encrypt will create our cert for us
+* web site: 
+  * request user input of how many listeners are using a stream
+  * report - stats on stream quality, number of listeners
+  * add /stats/ page to the web server so you can view the statistics of the streams being processed
+* add security (right now you can only restrict by IP addresses before you start the container)
+* add instructions to upload to a plesk server or AWS Fargate
 * add a trivial API to retrieve the container build version
+* allow storage and retrieval of streams for 2 weeks
+* allow audio only for low bandwidth broadcast sites
 
 
 ### Alternate way to get this running
