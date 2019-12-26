@@ -23,23 +23,28 @@ $ docker stop d2ce170cb21b
 
 ### 2. Setup OBS to push-stream to container
 
-#### rtmp://host ip/live/{room-name} (can be filled in at will, can't conflict)
+OBS should be setup to stream to `rtmp://{domainname or IP}/live/`.  Whatever you wish the `{room-name}` to be should be entered for in the `{stream-key}` field.
+
+In other words, the `{stream-key}` becomes the `{room-name}` in your addresses.
+
+* rtmp://{domainname or IP}/live/{room-name} 
+
+`{room-name}` can be anything you choose when you start the stream. It must be unique for all active streams.
 
 
 ### 3. Default playback address
 
-OSB should be setup to stream to `rtmp://{ip or hostname}/live/` and whatever you wish the `{room-name}` to be should be entered for in the `{stream-key}` field.
-
-`{stream-key}` becomes the `{room-name}`
-
-* rtmp://Host ip/live/{room-name}
-* http://Host ip/live/{room-name}.m3u8   
-* http://Host ip/live/{room-name}_1080p.m3u8 （1080p Resolution）   
-* http://Host ip/live/{room-name}_720p.m3u8 （720p Resolution）   
-* http://Host ip/live/{room-name}_480p.m3u8 （480p Resolution）   
+* rtmp://{domainname or IP}/live/{room-name}
+* http://{domainname or IP}/live/{room-name}.m3u8   
+* http://{domainname or IP}/live/{room-name}_1080p.m3u8 （1080p Resolution）   
+* http://{domainname or IP}/live/{room-name}_720p.m3u8  （720p Resolution）   
+* http://{domainname or IP}/live/{room-name}_480p.m3u8  （480p Resolution）   
 
 
 ### 4. Use the shell in a container
+
+This is not really useful since it discards anything you do, but it helped me understand containers and their life-cycle more.
+
 ```
 $ docker run -i -t rtmp-hls-live /bin/sh
 
