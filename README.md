@@ -2,12 +2,14 @@
 
 This docker container will setup an `nginx` web server that supports `rtmp` and `http` protocols. The idea is a quick way to get OBS streaming to your own, private server where you can control who sees the boradcast.
 
+Included within is a watcher: [Supervisord](http://supervisord.org/) watches the nginx server and restarts it if it fails. Supervisord starts processes as subprocesses, so it always knows the true up/down status of its children and can be queried conveniently for this data.
+
 It exposes `port 80` for `http://` viewing and `port 1935` for `rtmp` ingesting (it also relays back out on 1935). Few clients understand `rtmp` so most of your viewers/listeners would be hitting the `http://` broadcast. (`https://` is planned).
+
 
 ### Broadcast site
 
 For video broadcast, a 1080p stream takes between 2-5Mbs. Your site should have, at minimum, 8Mbs of upload bandwidth. The benefit of using this container is that if you have 10 people watching, then you'd need closer to 30Mbs to keep those streams going. Using this container, you can use your upload bandwidth more efficiently - this container will stream to the 10 user while you only have to worry with a single 3Mbs stream.
-
 
 ### 1. Build from this repo:
 ```
