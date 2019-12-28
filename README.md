@@ -56,10 +56,10 @@ In other words, the `{stream-key}` becomes the `{room-name}` in your addresses.
 
 ### 4. Use the shell in a container
 
-This is not really useful since it discards anything you do, but it helped me understand containers and their life-cycle more.
+This is not really useful since it discards anything you do, but it helped me understand containers and their life-cycle more. It also lets you inspect the current state of the container.
 
 ```
-$ docker run -i -t rtmp-hls-live /bin/sh
+$ docker run -it rtmp-hls-live /bin/sh
 
 / # apk add --no-cache nano
 
